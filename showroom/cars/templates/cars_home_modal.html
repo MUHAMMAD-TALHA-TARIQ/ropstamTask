@@ -1,0 +1,55 @@
+<!-- Create Modal -->
+<div class="modal fade" id="CarsModal_c" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Register Car</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form method="post" action="{% url 'cars_create' %}"
+                      style="background:wheat; padding:10px;">
+                    {% csrf_token %}
+
+                    <label>Name : </label>
+                    <input type="text" name="name" required>
+                    <br>
+
+                    <label>Model : </label>
+                    <input type="number" name="model" required>
+                    <br>
+
+                    <label>Maker : </label>
+                    <input type="text" name="maker" required>
+                    <br>
+
+                    <label>Color : </label>
+                    <input type="text" name="color" required>
+                    <br>
+
+                    <label>Types : </label>
+                    <input type="text" name="types" required>
+                    <br>
+
+                    <label>Reg# : </label>
+                    <input type="text" name="reg" required>
+                    <br>
+
+
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-primary" data-toggle="modal"
+                                style="background:#00aeff; color:white; outline:none; border:none;">
+                            Register <i class="bi bi-file-plus-fill"></i>
+                        </button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

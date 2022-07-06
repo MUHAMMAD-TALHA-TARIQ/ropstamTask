@@ -1,0 +1,62 @@
+<br><br>
+<div style="background:#ffc845; color:black; padding:10px; border-radius:50px;">
+    <form method="post" action="{% url 'category_filter' %}">
+        {% csrf_token %}
+        <label>Types : </label>
+        <select class="form-select" name="types" required>
+            <option selected>select car type</option>
+            <option value="suv">suv</option>
+            <option value="sedan">sedan</option>
+            <option value="hatchback">hatchback</option>
+            <option value="bus">bus</option>
+            <option value="pickup">pickup</option>
+        </select>
+
+        <label>Maker : </label>
+        <select class="form-select" name="maker" required>
+            <option selected>select car maker</option>
+            <option value="mercedes">mercedes</option>
+            <option value="hyundai">hyundai</option>
+            <option value="ford">ford</option>
+            <option value="audi">audi</option>
+            <option value="suzuki">suzuki</option>
+            <option value="toyota">toyota</option>
+            <option value="bmw">bmw</option>
+            <option value="honda">honda</option>
+        </select>
+
+
+        <label>Color : </label>
+        <select class="form-select" name="color" required>
+            <option selected>select car color</option>
+            <option value="white">white</option>
+            <option value="grey">grey</option>
+            <option value="black">black</option>
+            <option value="blue">blue</option>
+            <option value="red">red</option>
+            <option value="yellow">yellow</option>
+            <option value="green">green</option>
+        </select>
+
+
+        <label>model : </label>
+        <select class="form-select" name="model" required>
+            <option selected>select car model</option>
+            <option value="2022">2022</option>
+            <option value="2021">2021</option>
+            <option value="2020">2020</option>
+            <option value="2019">2019</option>
+            <option value="2018">2018</option>
+            <option value="2017">2017</option>
+            <option value="2016">2016</option>
+            <option value="2015">2015</option>
+        </select>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button class="btn  btn-sm" type="submit"
+                style="background:#00aeff; color:white; outline:none; border:none;">
+            Serach <i class="bi bi-search"></i>
+        </button>
+
+    </form>
+</div>
+
